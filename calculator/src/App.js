@@ -15,15 +15,22 @@ const btnValues = [
 const App = () => {
   return(
     <Wrapper>
-      <screen value="0" />
+      <Screen value="0" />
       <ButtonBox>
-        <Button
-          className=""
-          value="0"
-          onClick={() => {
-            console.log("Button clicked");
-          }}
-        />
+        {
+          btnValues.flat().map((btn, i) => {
+            return(
+              <Button
+                key={i}
+                className={btn === "=" ? "equals" : ""}
+                value={btn}
+                onClick={() => {
+                  console.log(`${btn} clicked!`);
+                }}
+              />
+            );
+          })
+        }
       </ButtonBox>
     </Wrapper>
   );
