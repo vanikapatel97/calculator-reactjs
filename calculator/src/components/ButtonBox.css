@@ -1,5 +1,5 @@
 .buttonBox{
-    width: 100px;
+    width: 338px;
     height: calc(100% - 110px);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
